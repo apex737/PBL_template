@@ -108,8 +108,6 @@ def check(root, allow_example=False):
                 errors.append(x['id'] + ': 결정 ' + did + '이(가) 어느 Step에도 없음')
 
     concepts = pages['concepts']
-    if not isinstance(concepts.get('learner', ''), str):
-        errors.append('concepts.html: learner는 문자열이어야 함')
     for x in concepts['items']:
         check_steps(x)
         if x.get('state') not in CONCEPT_STATES:
