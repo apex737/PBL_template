@@ -4,6 +4,7 @@
 | 무엇 | 어디 |
 |---|---|
 | 목표·학습 목표·제약·단계 위치 | project/project.md |
+| 환경설정·셋업 내용과 결과 | project/project.md의 환경설정·셋업 항목만 사용 |
 | 단계 | project/Steps/SNN.md (step.md를 복사) |
 | 구조 | project/flowchart.html의 pbl-data JSON |
 | 값·정책 | project/params.html의 pbl-data JSON |
@@ -17,6 +18,7 @@
 - Step의 현재 판정은 각 Step 파일에만 둔다.
   - 값은 미검증 / 통과 / 실패 / 재검증 필요 / 탐색 완료 중 하나다.
   - Step ID는 재사용하지 않는다.
+- 환경설정·셋업은 단계 표와 Step 파일을 만들지 않고 project.md에만 기록한다. 셋업만으로 flowchart·params·concepts를 갱신하지 않는다.
 - 기록 안에 이전 값 배열을 쌓지 않는다.
 - 긴 로그는 Step에서 상대 경로로 참조하고, 코드 버전과 실험 조건을 함께 적는다.
 
@@ -86,6 +88,7 @@
 - 기록에는 현재 상태만 둔다. 이전 값·이전 평가·이전 구조는 git 기록으로 찾는다.
 - 바꾼 이유
   - 관련 Step의 결정 기록에 쓴다.
+  - 환경설정·셋업의 이유는 project.md의 환경설정·셋업 항목에만 쓴다.
   - 커밋 메시지에 Step ID와 한 줄 이유를 쓴다.
   - 커밋은 사용자가 허락했을 때만 한다.
 - 범위 제외 항목을 지우지 않는다.
